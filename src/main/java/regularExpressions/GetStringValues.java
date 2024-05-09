@@ -1,9 +1,15 @@
 package regularExpressions;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
 public class GetStringValues {
 
 	public static String[] dataValues() {
 
+	
 		String[] data = new String[5];
 
 		data[0] = "ABCDEFabZZZXXYYYWWcdef123450SQLJava*&%@#!}{w3resource.com";
@@ -69,6 +75,11 @@ public class GetStringValues {
 	}
 
 	public static void main(String[] args) {
+
+		
+		Logger.getLogger("org.openqa.selenium").setLevel(Level.SEVERE);
+		 
+		ChromeDriver driver = new ChromeDriver();
 
 		GetStringValues rmn = new GetStringValues();
 		rmn.removeNumbers();
